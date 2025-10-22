@@ -1,0 +1,28 @@
+.back-button {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+.mutating {
+  background: var(--sheet-background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.mutating .head {
+  padding-top: 8px;
+  position: relative;
+  border-bottom: 1px solid rgb(235, 235, 235);
+  margin-bottom: 12px;
+}
+
+.mutating .body .row {
+  padding: 0 16px;
+  margin-top: 18px;
+}
+
+.mutating .body {
+  flex: 1;
+}

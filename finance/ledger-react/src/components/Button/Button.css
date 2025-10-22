@@ -1,0 +1,38 @@
+.button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--button-text-color);
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.button:not(.box-less) {
+  padding: 0px 16px;
+  height: 38px;
+  border: 1px solid var(--button-border-color);
+  background: var(--button-background-color);
+}
+
+.box-less {
+  height: 24px;
+  width: 24px;
+  background: none;
+  border: none;
+}
+
+.button.disabled {
+  cursor: not-allowed;
+  color: var(--disabled-color);
+}
+
+.button .spinner-sheet {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--curtain-background-color);
+}

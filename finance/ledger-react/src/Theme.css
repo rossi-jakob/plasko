@@ -1,0 +1,22 @@
+:root {
+  --main-background-color: rgb(229, 246, 253);
+  --sheet-background-color: white;
+  --button-background-color: rgb(255, 244, 229);
+  --curtain-background-color: rgb(229, 246, 253, 0.5);
+  --notification-background-color: rgb(35, 35, 36);
+  --success-background-color: rgb(46, 125, 50);
+  --success-background-color: rgb(46, 125, 50);
+  --grayout-background-color: rgba(0, 0, 0, 0.1);
+  --error-background-color: rgb(239, 83, 80);
+
+  --border-color: rgb(213, 213, 213);
+  --button-border-color: rgba(0, 0, 0, 0.12);
+  --focus-border-color: rgb(74, 77, 82);
+
+  --primary-text-color: #1a2027;
+  --secondary-text-color: rgb(145, 145, 145);
+  --error-text-color: rgb(239, 83, 80);
+  --button-text-color: #1976d2;
+  --disabled-color: rgba(0, 0, 0, 0.3);
+  --message-text-color: white;
+}

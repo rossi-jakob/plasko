@@ -1,0 +1,85 @@
+.card-pane {
+  background: var(--button-background-color);
+  position: relative;
+  margin: 8px;
+  border-radius: 4px;
+  transition: all 0.3s ease-in-out;
+}
+
+.card-sheet {
+  display: flex;
+  flex-flow: column nowrap;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  align-items: flex-end;
+}
+
+.card-sheet button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  height: 100%;
+  width: 60px;
+  background: none;
+}
+
+.card {
+  background: var(--sheet-background-color);
+  border-radius: 4px;
+  padding: 16px;
+  position: relative;
+  z-index: 2;
+  transition: all 0.4s ease-in;
+  left: 0;
+}
+
+.card .reason {
+  padding: 0;
+  margin: 0 0 12px 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+}
+
+.card .note {
+  padding: 0;
+  margin: 0 0 8px 0;
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 1rem;
+}
+
+.headline {
+  display: grid;
+  grid: auto-flow / auto 1fr auto;
+  grid-gap: 8px;
+}
+
+.headline h1,
+.headline h2 {
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  line-height: 1.5;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+}
+
+.headline h2 {
+  text-align: right;
+}
+
+.headline .icon {
+  width: 24px;
+  height: 24px;
+  color: var(--button-text-color);
+}
+
+.card-pane--collapse {
+  height: 1px !important;
+  opacity: 0;
+  overflow: hidden;
+}

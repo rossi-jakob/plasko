@@ -1,0 +1,96 @@
+.curtain {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  transition: all 0.4s ease-in;
+}
+
+.curtain--in {
+  z-index: 101;
+  background: rgb(18, 92, 122, 0.3);
+}
+
+.appbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: white;
+  transition: all 0.1s ease-in-out;
+  padding: 8px;
+  box-sizing: border-box;
+  overflow-x: auto;
+}
+
+.appbar.appbar--float {
+  background: #fff;
+  box-shadow: 0px 2px 3px 1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+    0px 1px 3px 0px rgb(0 0 0 / 12%);
+}
+
+.appbar_filter {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  position: fixed;
+  width: 100%;
+  z-index: 102;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.appbar_filter_footer {
+  height: 108px;
+}
+
+.appbar_filter_content {
+  background: #fff;
+}
+
+.appbar_filter--in {
+  transform: translateY(28px);
+}
+
+.appbar--scrollable {
+  justify-content: flex-start;
+}
+
+.appbar_chips {
+  overflow-x: auto;
+  flex: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.appbar button {
+  height: 38px;
+  width: 38px;
+}
+
+.appbar button.exit {
+  margin-left: auto;
+}
+
+.appbar .button-group {
+  display: flex;
+  gap: 8px;
+}
+
+.filter-chip {
+  position: relative;
+  padding: 6px 0 6px 6px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  height: 25px;
+  flex-shrink: 0;
+  gap: 4px;
+}
