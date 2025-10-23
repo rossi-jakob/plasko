@@ -1,0 +1,59 @@
+{
+	// Rust: save on format
+	"[rust]": {
+		"editor.formatOnSave": true,
+		"editor.formatOnPaste": true,
+		"editor.defaultFormatter": "rust-lang.rust-analyzer"
+	},
+	// Web: save on format
+	"[javascript][typescript][svelte]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		},
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint"
+	},
+	"[scss]": {
+		"editor.codeActionsOnSave": {
+			"source.fixAll.eslint": "explicit"
+		},
+		"editor.formatOnSave": true,
+		// Configured in `.prettierrc`
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json][jsonc][yaml][github-actions-workflow]": {
+		"editor.formatOnSave": true,
+		// Configured in `.prettierrc`
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	// Handlebars: don't save on format
+	// (`about.hbs` is used by Cargo About to encode license information)
+	"[handlebars]": {
+		"editor.formatOnSave": false
+	},
+	// Rust Analyzer config
+	"rust-analyzer.cargo.allTargets": false,
+	"rust-analyzer.procMacro.ignored": {
+		"serde_derive": ["Serialize", "Deserialize"],
+		"specta_macros": ["Type"] // Disabled because of: https://github.com/specta-rs/specta/issues/387
+	},
+	// ESLint config
+	"eslint.format.enable": true,
+	"eslint.workingDirectories": ["./frontend", "./website"],
+	"eslint.validate": ["javascript", "typescript", "svelte"],
+	// Svelte config
+	"svelte.plugin.svelte.compilerWarnings": {
+		"css-unused-selector": "ignore", // NOTICE: Keep this list in sync with the list in `frontend/vite.config.ts`
+		"vite-plugin-svelte-css-no-scopable-elements": "ignore", // NOTICE: Keep this list in sync with the list in `frontend/vite.config.ts`
+		"a11y-no-static-element-interactions": "ignore", // NOTICE: Keep this list in sync with the list in `frontend/vite.config.ts`
+		"a11y-no-noninteractive-element-interactions": "ignore", // NOTICE: Keep this list in sync with the list in `frontend/vite.config.ts`
+		"a11y-click-events-have-key-events": "ignore" // NOTICE: Keep this list in sync with the list in `frontend/vite.config.ts`
+	},
+	// VS Code config
+	"html.format.wrapLineLength": 200,
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.associations": {
+		"*.graphite": "json"
+	}
+}
